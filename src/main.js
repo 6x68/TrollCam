@@ -116,7 +116,7 @@ function inject (scope) {
         draw();
 
         previewVideo.onloadedmetadata = () => {
-            const stream = previewVideo.captureStream();
+            const stream = canvas.captureStream();
             const audioTrack = stream.getAudioTracks()[0];
             if (audioTrack) {
                 audioStream.addTrack(audioTrack);
